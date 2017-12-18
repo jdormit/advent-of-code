@@ -5,5 +5,9 @@
 
 
 (defn -main
-  [& args]
-  (day1/part1 args))
+  [func & args]
+  (eval (read-string (str "(advent-of-code."
+                          func
+                          " (quote "
+                          args
+                          "))"))))
